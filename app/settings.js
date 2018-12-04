@@ -32,20 +32,6 @@ Drupal.settings.language_default = 'und';
 
 /* CACHING AND PERFORMANCE */
 
-// The my_theme blocks.
-drupalgap.settings.blocks.my_theme = {
-  header: {
-    title: {},
-    main_menu: {}
-  },
-  content: {
-    main: {}
-  },
-  footer: {
-    powered_by: {}
-  }
-};
-
 // Entity Caching
 Drupal.settings.cache.entity = {
 
@@ -138,7 +124,7 @@ drupalgap.settings.title = 'DrupalGap';
 drupalgap.settings.front = 'hello_world';
 
 // Theme
-drupalgap.settings.theme = 'my_theme';
+drupalgap.settings.theme = 'easystreet3';
 
 // Logo
 drupalgap.settings.logo = 'themes/easystreet3/images/drupalgap.jpg';
