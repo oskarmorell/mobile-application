@@ -13,6 +13,12 @@
     "phonegap-plugin-barcodescanner": {
       "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "com.example"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.example"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.example"
     }
   },
   "dependent_plugins": {}
