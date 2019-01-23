@@ -19,6 +19,9 @@
     },
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.example"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.example"
     }
   },
   "dependent_plugins": {}

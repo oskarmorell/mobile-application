@@ -30,42 +30,30 @@
                 width: 104px;
             }
         </style>
-      <script>
-      if(localStorage.getItem("LocalData") == null)
-      {
-        var data = [];
-        data = JSON.stringify(data);
-        localStorage.setItem("LocalData", data);
-      }
-      function scan()
-      {
-      cordova.plugins.barcodeScanner.scan(
-        function (result) {
-            if(!result.cancelled)
-            {
-                if(result.format == "QR_CODE")
-                {
-                    navigator.notification.prompt("Please enter name of data",  function(input){
-                        var name = input.input1;
+        <script>
+        function scan()
+        {
+            cordova.plugins.barcodeScanner.scan(
+            function (result) {
+                if(!result.cancelled){
+                    if(result.format == "QR_CODE"){
                         var value = result.text;
-
-                        var data = localStorage.getItem("LocalData");
-                        console.log(data);
-                        data = JSON.parse(data);
-                        data[data.length] = [name, value];
-
-                        localStorage.setItem("LocalData", JSON.stringify(data));
-
-                        alert("Done");
-                    });
+                        window.open(value, '_blank');
+                    }
+                    else{
+                        alert("Sorry, only qr codes this time ;)");
+                    }
                 }
+                else{
+                    alert("The user has dismissed the scan");
+                }
+            },
+            function (error) {
+                alert("An error ocurred: " + error);
             }
-        },
-        function (error) {
-            alert("Scanning failed: " + error);
+            );
         }
-   );
-}
+      
       </script>
 
       <meta charset="utf-8" />
